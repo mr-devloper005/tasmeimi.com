@@ -3,48 +3,44 @@ import { slot4BrandConfig } from '@/editable/theme/brand.config'
 export const globalContent = {
   site: {
     name: slot4BrandConfig.siteName,
-    tagline: slot4BrandConfig.tagline || 'Independent reading platform',
+    tagline: slot4BrandConfig.tagline,
     domain: slot4BrandConfig.domain,
     baseUrl: slot4BrandConfig.baseUrl,
   },
   nav: {
-    tagline: 'Independent reading platform',
+    announcement: 'Fresh document sessions, uploads, and share-ready pages are live now.',
+    announcementCta: { label: 'Explore library', href: '/pdf' },
+    tagline: 'Curated PDF publishing and document discovery',
     primaryLinks: [
-      { label: 'Articles', href: '/articles' },
-      { label: 'Visuals', href: '/image-sharing' },
-      { label: 'Listings', href: '/listings' },
+      { label: 'PDFs', href: '/pdf' },
+      { label: 'Articles', href: '/article' },
+      { label: 'Images', href: '/image' },
+      { label: 'Profiles', href: '/profile' },
       { label: 'Contact', href: '/contact' },
     ],
     actions: {
-      primary: { label: 'Start exploring', href: '/' },
-      secondary: { label: 'Submit', href: '/contact' },
+      primary: { label: 'Get started', href: '/signup' },
+      secondary: { label: 'Log in', href: '/login' },
     },
   },
   footer: {
-    tagline: 'Stories, resources, and discoverable posts',
-    description: 'A connected publishing surface for articles, visuals, listings, profiles, bookmarks, and downloadable resources.',
+    tagline: 'A polished surface for document sharing, browsing, and discovery.',
+    description: 'TASMEIMI.com organizes PDF uploads, editorial notes, resource pages, and supporting content into one premium library experience.',
     columns: [
+      
       {
-        title: 'Explore',
+        title: 'Publish',
         links: [
-          { label: 'Articles', href: '/articles' },
-          { label: 'Listings', href: '/listings' },
-          { label: 'Images', href: '/image-sharing' },
-          { label: 'PDF Library', href: '/pdf' },
-        ],
-      },
-      {
-        title: 'Site',
-        links: [
-          { label: 'About', href: '/about' },
+          { label: 'Create post', href: '/create' },
           { label: 'Contact', href: '/contact' },
+          { label: 'About', href: '/about' },
         ],
       },
     ],
-    bottomNote: 'Built for clean discovery and connected publishing.',
+    bottomNote: 'Designed for calm sharing, quicker scanning, and better reading.',
   },
   commonLabels: {
-    readMore: 'Read more',
+    readMore: 'Open page',
     viewAll: 'View all',
     explore: 'Explore',
     latest: 'Latest',
