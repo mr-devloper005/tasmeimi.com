@@ -261,7 +261,6 @@ function BookmarkDetail({ post, related }: { post: SitePost; related: SitePost[]
 
 function PdfDetail({ post, related }: { post: SitePost; related: SitePost[] }) {
   const fileUrl = getField(post, ['fileUrl', 'pdfUrl', 'documentUrl', 'url'])
-  const published = post.publishedAt ? new Date(post.publishedAt).toLocaleDateString() : ''
   const category = categoryOf(post, 'PDF')
   const pageHint = getField(post, ['pages', 'pageCount', 'length'])
   const author = getField(post, ['author', 'publisher', 'company'])
@@ -273,7 +272,6 @@ function PdfDetail({ post, related }: { post: SitePost; related: SitePost[] }) {
             <BackLink task="pdf" />
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <span className="rounded-full bg-white/12 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-white/82">{category}</span>
-              {published ? <span className="rounded-full border border-white/15 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-white/70">{published}</span> : null}
             </div>
             <div className="mt-8 flex h-24 w-24 items-center justify-center rounded-[2rem] bg-white/10 text-white">
               <FileText className="h-11 w-11" />
